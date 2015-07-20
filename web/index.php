@@ -1,4 +1,7 @@
 <?php require ("common.php"); ?>
+<?php
+  phpinfo();
+?>
 <?php include 'header.php'; ?>
 
 <?php

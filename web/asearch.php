@@ -11,7 +11,9 @@
     mysql_select_db("***REMOVED***") or die(mysql_error());
     /* tutorial_search is the name of database we've created */
 ?>
- 
+<?php
+  phpinfo();
+?>
 <?php include 'header.php'; ?>
 <?php 
 $overviewformattypestandard == 0;
