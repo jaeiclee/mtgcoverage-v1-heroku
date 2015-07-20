@@ -7,7 +7,7 @@
 	$database = substr($url["path"], 1);
 
 
-    $db = new mysqli('$server', '$username', '$password', '$database');
+    $db = new mysqli($server, $username, $password, $database);
 
 	if($db->connect_errno > 0){
     die('Unable to connect to database [' . $db->connect_error . ']');

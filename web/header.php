@@ -6,7 +6,7 @@ $username = $url["user"];
 $password = $url["pass"];
 $database = substr($url["path"], 1);
 
-$dbstreams = new mysqli('$server', '$username', '$password', '$database');
+$dbstreams = new mysqli($server, $username, $password, $database);
 
 if($db->connect_errno > 0){
 die('Unable to connect to database [' . $db->connect_error . ']');
