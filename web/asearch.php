@@ -1,5 +1,5 @@
 <?php
-    mysql_connect("localhost", "db_username", "db_password") or die("Error connecting to database: ".mysql_error());
+    mysql_connect("***REMOVED***", "***REMOVED***", "***REMOVED***") or die("Error connecting to database: ".mysql_error());
     /*
         localhost - it's location of the mysql server, usually localhost
         root - your username
@@ -8,7 +8,7 @@
         if connection fails it will stop loading the page and display an error
     */
      
-    mysql_select_db("database_name") or die(mysql_error());
+    mysql_select_db("***REMOVED***") or die(mysql_error());
     /* tutorial_search is the name of database we've created */
 ?>
  

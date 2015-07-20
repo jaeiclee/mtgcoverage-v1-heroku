@@ -1,6 +1,6 @@
 <?php
-$dbstreams = mysql_connect("localhost", "db_username", "db_password");
-mysql_select_db("database_name", $dbstreams);
+$dbstreams = mysql_connect("***REMOVED***", "***REMOVED***", "***REMOVED***");
+mysql_select_db("***REMOVED***", $dbstreams);
 
 
 $formattype = $_GET['formattype'];

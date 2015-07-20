@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","db_username","db_password","database_name");
+$con=mysqli_connect("***REMOVED***","***REMOVED***","***REMOVED***","***REMOVED***");
 
 // Check connection
 if (mysqli_connect_errno($con))
