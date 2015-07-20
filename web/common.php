@@ -2,7 +2,7 @@
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
     // These variables define the connection information for your MySQL database 
-    $host = $url["host"];
+    $host = "***REMOVED***";
     $username = $url["user"];
     $password = $url["pass"];
     $dbname = substr($url["path"], 1);
