@@ -1,9 +1,9 @@
 <?php
-    $con = mysqli_connect("***REMOVED***", "***REMOVED***", "***REMOVED***", "***REMOVED***");
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+    $con = new mysqli('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***');
+
+    if($db->connect_errno > 0){
+    die('Unable to connect to database [' . $db->connect_error . ']');
+    }
  
 $channelName = 'scglive';
  

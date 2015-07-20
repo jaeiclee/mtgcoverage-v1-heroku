@@ -1,5 +1,9 @@
 <?php
-    mysql_connect("***REMOVED***", "***REMOVED***", "***REMOVED***") or die("Error connecting to database: ".mysql_error());
+    $db = new mysqli('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***');
+
+	if($db->connect_errno > 0){
+    die('Unable to connect to database [' . $db->connect_error . ']');
+	}
     /*
         localhost - it's location of the mysql server, usually localhost
         root - your username
@@ -8,7 +12,7 @@
         if connection fails it will stop loading the page and display an error
     */
      
-    mysql_select_db("***REMOVED***") or die(mysql_error());
+    //mysqli_select_db("") or die(mysqli_error());
     /* tutorial_search is the name of database we've created */
 ?>
  
@@ -35,10 +39,10 @@ $overviewformattypemixed == 0;
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
-        $query = mysql_real_escape_string($query);
+        $query = mysqli_real_escape_string($query);
         // makes sure nobody uses SQL injection
          
-        $raw_results = mysql_query("SELECT * FROM events
+        $raw_results = mysqli_query("SELECT * FROM events
             WHERE (`round1deck1` LIKE '%".$query."%') OR (`round1deck2` LIKE '%".$query."%') OR 
 			(`round1deck1` LIKE '%".$query."%') OR (`round1deck2` LIKE '%".$query."%') OR 
 			(`round2deck1` LIKE '%".$query."%') OR (`round2deck2` LIKE '%".$query."%') OR 
@@ -68,7 +72,7 @@ $overviewformattypemixed == 0;
 			(`semi2deck1` LIKE '%".$query."%') OR (`semi2deck2` LIKE '%".$query."%') OR 
 			(`finaldeck1` LIKE '%".$query."%') OR (`finaldeck2` LIKE '%".$query."%') 
 			ORDER BY formattype DESC, enddate DESC;	
-			") or die(mysql_error());
+			") or die(mysqli_error());
              
         // * means that it selects all fields, you can also write: `id`, `title`, `text`
         // articles is the name of our table
@@ -77,10 +81,10 @@ $overviewformattypemixed == 0;
         // it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
         // or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
          
-        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+        if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
              
-            while($results = mysql_fetch_array($raw_results)){
-            // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
+            while($results = mysqli_fetch_array($raw_results)){
+            // $results = mysqli_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
              
 			 if ($results['formattype'] == 'Standard' && $overviewformattypestandard == 0) {
                 echo "<br><h3> ". $results['formattype']. ":</h3><br> ";
@@ -377,10 +381,10 @@ $nice_format_enddate = date("jS F Y", strtotime($results['enddate']));
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
-        $query = mysql_real_escape_string($query);
+        $query = mysqli_real_escape_string($query);
         // makes sure nobody uses SQL injection
          
-		$raw_results = mysql_query("SELECT * FROM events
+		$raw_results = mysqli_query("SELECT * FROM events
             WHERE (`round1player1` LIKE '%".$query."%') OR (`round1player2` LIKE '%".$query."%') OR 
 			(`round1player1` LIKE '%".$query."%') OR (`round1player2` LIKE '%".$query."%') OR 
 			(`round2player1` LIKE '%".$query."%') OR (`round2player2` LIKE '%".$query."%') OR 
@@ -410,7 +414,7 @@ $nice_format_enddate = date("jS F Y", strtotime($results['enddate']));
 			(`semi2player1` LIKE '%".$query."%') OR (`semi2player2` LIKE '%".$query."%') OR 
 			(`finalplayer1` LIKE '%".$query."%') OR (`finalplayer2` LIKE '%".$query."%') 
 			ORDER BY formattype DESC, enddate DESC;	
-			") or die(mysql_error());
+			") or die(mysqli_error());
              
         // * means that it selects all fields, you can also write: `id`, `title`, `text`
         // articles is the name of our table
@@ -419,10 +423,10 @@ $nice_format_enddate = date("jS F Y", strtotime($results['enddate']));
         // it will match "hello", "Hello man", "gogohello", if you want exact match use `title`='$query'
         // or if you want to match just full word so "gogohello" is out use '% $query %' ...OR ... '$query %' ... OR ... '% $query'
          
-        if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+        if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
              
-            while($results = mysql_fetch_array($raw_results)){
-            // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
+            while($results = mysqli_fetch_array($raw_results)){
+            // $results = mysqli_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
              
 			 
 			 if ($results['formattype'] == 'Standard' && $overviewformattypestandard == 0) {

@@ -1,7 +1,9 @@
 <?php
-$dbstreams = mysql_connect("***REMOVED***", "***REMOVED***", "***REMOVED***");
-mysql_select_db("***REMOVED***", $dbstreams);
+$dbstreams = new mysqli('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***');
 
+if($db->connect_errno > 0){
+die('Unable to connect to database [' . $db->connect_error . ']');
+}
 
 $formattype = $_GET['formattype'];
 $eventid = $_GET['eventid'];
