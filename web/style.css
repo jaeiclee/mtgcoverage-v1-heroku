@@ -1,0 +1,256 @@
+/*
+     FILE ARCHIVED ON 21:29:00 Jun 8, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:14:26 Apr 15, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+
+html {
+       overflow-y: scroll; overflow: -moz-scrollbars-vertical;
+}
+BODY {
+	background-color:	#cccccc; FONT-SIZE: 10pt; FONT-FAMILY: "Tahoma", "Arial";
+}
+P {
+	FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+TD {
+	FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+
+.content {
+display:none;
+}
+
+
+table.out {
+border: 1px solid #000000;
+background-color: #FFFFFF;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: 0px 0px;
+}
+
+H2 {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+H3 {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+H4 {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+H5 {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+H6 {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+TH {
+	COLOR: #000000; FONT-FAMILY: "Tahoma", "Arial"
+}
+UNKNOWN {
+	SCROLLBAR-FACE-COLOR: #002255; background-color: #000000; FONT-SIZE: 10pt; SCROLLBAR-HIGHLIGHT-COLOR: #666666; SCROLLBAR-SHADOW-COLOR: #002255; COLOR: #0077aa; SCROLLBAR-3DLIGHT-COLOR: #002255; LINE-HEIGHT: 18pt; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #225588; FONT-FAMILY: "Tahoma", "Arial"; SCROLLBAR-DARKSHADOW-COLOR: #002255
+}
+A:link {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-WEIGHT: bold; COLOR: #000000;TEXT-DECORATION: underline
+}
+A:unknown {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.hidden>span {
+    display:none;
+
+}
+
+.visible>span {
+    display:block;
+
+}
+
+/* structural styles and offsets */
+ul.horizontal, ul.horizontal li, ul.horizontal ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 100%;
+}
+
+ul.horizontal {
+  position: relative;
+  left: 0;
+  width: 100%;
+  cursor: default;
+  z-index: 2000;
+  top: 3px;
+}
+
+ul.horizontal li {
+  width: auto;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  cursor: hand;
+  text-align: left;
+  left: 1em;
+  margin: 0 0 0 -0.1em;
+}
+
+* html ul.horizontal li {
+  margin: 0 -1.1em 0 1em;
+  left: 0;
+}
+
+ul[class^="horizontal"] li {
+  margin: 0 -1.1em 0 1em;
+  left: 0;
+}
+
+*+html ul.horizontal li {
+  margin: 0 -1.1em 0 1em;
+  left: 0;
+}
+
+ul.horizontal ul {
+  z-index: 2020;
+  padding: 0;
+  cursor: default;
+  position: absolute;
+  left: -100em;
+  top: auto;
+  width: 8.2em;
+  margin: 0 0 0 0;
+  padding: 1px 0 0 0;
+}
+
+ul.horizontal ul li {
+  width: 8.2em;
+  float: none;
+  left: auto;
+  margin: -1px 0 0 0;
+}
+
+ul.horizontal ul ul {
+  margin: -0.45em 0 0 7.65em;
+}
+
+/* design styles */
+ul.horizontal ul {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+ul.horizontal a, ul.horizontal a:visited {
+  display: block;
+  cursor: pointer;
+  cursor: hand;
+  background: #bdbdbd;
+  border: 1px solid #000000;
+  padding: 5px 18px 5px 7px;
+  font: normal normal bold 0.7em tahoma, verdana, sans-serif;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+ul.horizontal a:hover, ul.horizontal a:focus, ul.horizontal a:active,
+ul.horizontal a.rollover:link, ul.horizontal a.rollover:visited {
+  background: #cccccc;
+  color: #000000;
+}
+
+/* submenu indicator arrows */
+ul.horizontal li.hasmenu > a:link, ul.horizontal li.hasmenu > a:visited {
+  background: url(menu/down-green.gif) #bdbdbd no-repeat 92% 50% !important;
+}
+
+ul.horizontal ul li.hasmenu > a:link, ul.horizontal li.hasmenu > a:visited {
+  background: url(menu/right-green.gif) #bdbdbd no-repeat 95% 50% !important;
+}
+
+ul.horizontal li.hasmenu > a:hover,
+ul.horizontal li.hasmenu > a:focus,
+ul.horizontal li.hasmenu > a:active,
+ul.horizontal li.hasmenu > a.rollover,
+ul.horizontal li.hasmenu > a.rollover:visited {
+  background: url(menu/down-red.gif) #cccccc no-repeat 92% 50% !important;
+}
+
+ul.horizontal ul li.hasmenu > a:hover,
+ul.horizontal ul li.hasmenu > a:focus,
+ul.horizontal ul li.hasmenu > a:active,
+ul.horizontal ul li.hasmenu > a.rollover,
+ul.horizontal ul li.hasmenu > a.rollover:visited {
+  background: url(menu/right-red.gif) #cccccc no-repeat 95% 50% !important;
+}
+
+* html ul.horizontal li.hasmenu a,
+* html ul.horizontal li.hasmenu a:visited {
+  background: expression(/hasmenu/.test(this.parentNode.className)
+      ? "url(menu/down-green.gif) #bdbdbd no-repeat 92% 50%" : "#bdbdbd");
+}
+* html ul.horizontal ul li.hasmenu a,
+* html ul.horizontal ul li.hasmenu a:visited {
+  background: expression(/hasmenu/.test(this.parentNode.className)
+      ? "url(menu/right-green.gif) #bdbdbd no-repeat 95% 50%" : "#bdbdbd");
+}
+
+* html ul.horizontal li.hasmenu a:hover,
+* html ul.horizontal li.hasmenu a:active,
+* html ul.horizontal li.hasmenu a.rollover,
+* html ul.horizontal li.hasmenu a.rollover:visited {
+  background: expression(/hasmenu/.test(this.parentNode.className)
+      ? "url(menu/down-red.gif) #cccccc no-repeat 92% 50%" : "#cccccc");
+}
+
+* html ul.horizontal ul li.hasmenu a:hover,
+* html ul.horizontal ul li.hasmenu a:active,
+* html ul.horizontal ul li.hasmenu a.rollover,
+* html ul.horizontal ul li.hasmenu a.rollover:visited {
+  background: expression(/hasmenu/.test(this.parentNode.className)
+      ? "url(menu/right-red.gif) #cccccc no-repeat 95% 50%" : "#cccccc");
+}
+
+/* browser hacks */
+ul.horizontal li { display:table; }
+ul[class="horizontal"] li { display:block; }
+
+ul.horizontal a { float: left; }
+@media Screen, Projection { ul.horizontal a { float: none; } }
+ul.horizontal ul a { float: none !important; }
+@media screen, projection {
+  * html ul.horizontal li {
+    display: inline;
+    f\loat: left;
+    background: #fff;
+  }
+}
+* html ul.horizontal li { position: static; }
+* html ul.horizontal a { position: relative; }
+
+*+html ul.horizontal li {
+  display: inline;
+  float: left;
+  background: #fff;
+  }
+*+html ul.horizontal li { position: static; }
+*+html ul.horizontal a { position: relative; }
+
+/* iframe layer */
+ul iframe {
+  position: absolute;
+  z-index: 1010;
+  border: none;
+}
