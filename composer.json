@@ -1,6 +1,6 @@
 {
   "require": {
-    "php": "~5.4.43"
+    "php": "~5.5.11"
   },
 
   "require-dev": {
