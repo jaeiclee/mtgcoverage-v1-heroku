@@ -43,7 +43,7 @@ $query = "SELECT * FROM events WHERE id IN ($ids) AND visible = '1' ORDER BY end
 elseif ($searchquery != '') {
 	if (strlen($searchquery) <= $min_length) {
 	echo "<center>Minimum search length is ".$min_length ."</center>";
-	die(mysqli_error());
+	die(mysqli_error($db));
 	}
 	else {
 		if ($searchquery != '') {
