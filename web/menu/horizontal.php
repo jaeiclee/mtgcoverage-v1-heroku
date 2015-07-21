@@ -11,7 +11,9 @@ else { echo '<a href="index.php?SD=0">Home</a>'; }
 		<ul>
 		<li><a href='calendar.php?whichevent=1'>Past events</a></li>
 		<li><a href='calendar.php?whichevent=0'>Future events</a></li>
-		<li><a href='calendar.php'>All events</a></li>
+		<!-- 
+		<li><a href='calendar.php'>All events</a></li> 
+		-->
 		</ul>
 		</li>
 	<li><a href ='decksearch.php'>Advanced search</a></li>

@@ -35,7 +35,7 @@ if ($formattype != '') {
 // Show events based on past/future events
 
 elseif ($whichevent == '1') {
-$query = "SELECT * FROM events WHERE finished = '1' ORDER BY enddate ASC";
+$query = "SELECT * FROM events WHERE finished = '1' ORDER BY enddate DESC";
 }
 elseif ($whichevent == '0') {
 $query = "SELECT * FROM events WHERE finished = '0' ORDER BY enddate ASC";
@@ -43,11 +43,11 @@ $query = "SELECT * FROM events WHERE finished = '0' ORDER BY enddate ASC";
 
 
 
-// Get latest events in case of no filter.
+// Get past events in case of no filter.
 
 
 else {
-$query = "SELECT * FROM events ORDER BY enddate ASC";
+$query = "SELECT * FROM events WHERE finished = '1' ORDER BY enddate DESC";
 
 }
 
