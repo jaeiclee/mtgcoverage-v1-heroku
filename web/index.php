@@ -113,14 +113,14 @@ $query = "SELECT * FROM events WHERE visible = '1' ORDER BY enddate DESC LIMIT 1
 <img src='
 <?php 
 if (strpos ($row['organiser'], 'GP') !== false) { echo 'images/gp.jpg'; }
-if (strpos ($row['organiser'], 'SCG') !== false) { echo 'images/scglive.png'; }
-if (strpos ($row['organiser'], 'PT') !== false) { echo 'images/pt.jpg'; }
-if (strpos ($row['organiser'], 'CFB') !== false) { echo 'images/cfb.png'; }
-if (strpos ($row['organiser'], 'TCG') !== false) { echo 'images/tcg.png'; }
-if (strpos ($row['organiser'], 'CT') !== false) { echo 'images/cardtitan.png'; }
-if (strpos ($row['organiser'], 'SCV') !== false) { echo 'images/scv.png'; }
-if (strpos ($row['organiser'], 'WORLDS') !== false) { echo 'images/worlds.png'; }
-if (strpos ($row['organiser'], '') !== false) { echo 'images/empty.png'; }
+elseif (strpos ($row['organiser'], 'SCG') !== false) { echo 'images/scglive.png'; }
+elseif (strpos ($row['organiser'], 'PT') !== false) { echo 'images/pt.jpg'; }
+elseif (strpos ($row['organiser'], 'CFB') !== false) { echo 'images/cfb.png'; }
+elseif (strpos ($row['organiser'], 'TCG') !== false) { echo 'images/tcg.png'; }
+elseif (strpos ($row['organiser'], 'CT') !== false) { echo 'images/cardtitan.png'; }
+elseif (strpos ($row['organiser'], 'SCV') !== false) { echo 'images/scv.png'; }
+elseif (strpos ($row['organiser'], 'WORLDS') !== false) { echo 'images/worlds.png'; }
+else { echo 'images/empty.png'; }
 ?>
 ' width="90px"></a>
 </div>

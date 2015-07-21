@@ -46,10 +46,10 @@ $overviewformattypemixed == 0;
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
-        $query = mysqli_real_escape_string($query);
+        $query = mysqli_real_escape_string($db, $query);
         // makes sure nobody uses SQL injection
          
-        $raw_results = mysqli_query("SELECT * FROM events
+        $raw_results = mysqli_query($db, "SELECT * FROM events
             WHERE (`round1deck1` LIKE '%".$query."%') OR (`round1deck2` LIKE '%".$query."%') OR 
 			(`round1deck1` LIKE '%".$query."%') OR (`round1deck2` LIKE '%".$query."%') OR 
 			(`round2deck1` LIKE '%".$query."%') OR (`round2deck2` LIKE '%".$query."%') OR 
@@ -388,10 +388,10 @@ $nice_format_enddate = date("jS F Y", strtotime($results['enddate']));
         $query = htmlspecialchars($query); 
         // changes characters used in html to their equivalents, for example: < to &gt;
          
-        $query = mysqli_real_escape_string($query);
+        $query = mysqli_real_escape_string($db, $query);
         // makes sure nobody uses SQL injection
          
-		$raw_results = mysqli_query("SELECT * FROM events
+		$raw_results = mysqli_query($db, "SELECT * FROM events
             WHERE (`round1player1` LIKE '%".$query."%') OR (`round1player2` LIKE '%".$query."%') OR 
 			(`round1player1` LIKE '%".$query."%') OR (`round1player2` LIKE '%".$query."%') OR 
 			(`round2player1` LIKE '%".$query."%') OR (`round2player2` LIKE '%".$query."%') OR 
@@ -421,7 +421,7 @@ $nice_format_enddate = date("jS F Y", strtotime($results['enddate']));
 			(`semi2player1` LIKE '%".$query."%') OR (`semi2player2` LIKE '%".$query."%') OR 
 			(`finalplayer1` LIKE '%".$query."%') OR (`finalplayer2` LIKE '%".$query."%') 
 			ORDER BY formattype DESC, enddate DESC;	
-			") or die(mysqli_error());
+			") or die(mysqli_error($db));
              
         // * means that it selects all fields, you can also write: `id`, `title`, `text`
         // articles is the name of our table
