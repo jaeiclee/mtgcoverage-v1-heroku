@@ -119,6 +119,7 @@ elseif (strpos ($row['organiser'], 'CFB') !== false) { echo 'images/cfb.png'; }
 elseif (strpos ($row['organiser'], 'TCG') !== false) { echo 'images/tcg.png'; }
 elseif (strpos ($row['organiser'], 'CT') !== false) { echo 'images/cardtitan.png'; }
 elseif (strpos ($row['organiser'], 'SCV') !== false) { echo 'images/scv.png'; }
+elseif (strpos ($row['organiser'], 'HRRY') !== false) { echo 'images/hareruya.png'; }
 elseif (strpos ($row['organiser'], 'WORLDS') !== false) { echo 'images/worlds.png'; }
 else { echo 'images/empty.png'; }
 ?>
